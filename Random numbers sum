@@ -1,0 +1,11 @@
+import random
+import math
+
+Start = int(input('lower limit: '))
+Stop = int(input('upper limit: '))
+limit = int(input('random guess: '))
+
+Random_ListOfIntegers = random.sample(range(Start, Stop), limit)
+print(Random_ListOfIntegers)
+print(math.fsum(Random_ListOfIntegers))
+
