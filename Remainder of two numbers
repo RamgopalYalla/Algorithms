@@ -1,0 +1,9 @@
+def remainder(a,b):
+    return int(a) % int(b)
+
+
+a = input('Enter first number: ')
+b = input('Enter second number: ')
+
+r = remainder(a,b)
+print(f"The remainder of {a} with {b} is {r}")
