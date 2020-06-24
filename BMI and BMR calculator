@@ -1,0 +1,30 @@
+#Data of person
+name = input('Name:')
+sex = input('Gender:')
+age = input('Age:')
+height = float(input('Height in meters:'))
+weight = input('Weight in kilograms:')
+request= input('What dou you what to know Body mass index(BMI) or Basal metabolic rate(BMR):')
+
+#Actual calculation
+if request.upper() == "BMI":
+    BMI = float(weight) / (float(height) ** 2)
+    print(f"Hi {name} your Body mass index is", BMI)
+    if BMI < 18:
+        print(f'You are underweight for {sex} and {age} ')
+    elif BMI > 25:
+        print(f'You are over weight for your age {age}')
+    else:
+        print(f'You are in normal weight for your age {age}')
+else:
+    if sex.upper() == "F":
+        BMR = 655 + (9.6 * float(weight)) + (1.8 * float(height)) - (4.7 * int(age))
+        print(f"Hi {name} your BMR is ",BMR)
+    else:
+        BMR = 66 + (13.7 * float(weight)) + (5 * float(height)) - (6.8 * int(age))
+        print(f"Hi {name} your BMR is ", BMR)
+
+
+
+
+
